@@ -1,23 +1,23 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 @plugin "daisyui";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme inline {
+  --text-xsp: 13px;
+  --text-smp: 15px;
+  --text-mdp: 17px;
+  --text-lgp: 19px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility container {
+  @apply mx-auto px-4;
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-white text-gray-900;
   }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
-
-body {
-  @apply bg-background text-foreground;
-}
